@@ -6,7 +6,7 @@ TTY='/dev/ttyUSB2'
 TMP_FILE='/tmp/collectd-Telit-LN940-wwan'
 GET_DATA='/usr/share/collectd/scripts/collectd_lte_signal.sh'
 
-[ $(ps | grep -q collectd_lte_signal.sh) ] || sh -c "$GET_DATA &"
+$(ps | grep -q collectd_lte_signal.sh) || sh -c "$GET_DATA &"
 
 while sleep "$INTERVAL"; do
 #    v=$(echo 'AT^RFSTS?' | socat - /dev/ttyUSB2,crnl 2>/dev/null | \
