@@ -2,6 +2,25 @@
 
 This package collects mobile signal statistics with collectd on OpenWrt v21.02. 
 
+## Hardware and Firmware
+### Hardware
+- Sony NCP-HG100/Cellular
+### Firmware
+OpenWrt 21.0.1
+- nginx
+- nginx-mod-luci
+- nginx-ssl
+- collectd
+- collectd-mod-lua
+- collectd-mod-ngin
+- collectd-mod-rrdtool
+- nginx-ssl-util
+- nginx-util
+- luci-nginx
+- luci-app-statistics
+- nginx-mod-luci
+- uwsgi-luci-support
+
 ## Usage
 1. Install OpenWrt packages: `collectd-mod-exec`, `collectd-mod-rrdtool` and `socat`
 2. Create a directory: `/usr/share/collectd/scripts`
