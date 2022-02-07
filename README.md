@@ -12,7 +12,7 @@ OpenWrt 21.0.1
 - nginx-ssl
 - collectd
 - collectd-mod-lua
-- collectd-mod-ngin
+- collectd-mod-nginx
 - collectd-mod-rrdtool
 - nginx-ssl-util
 - nginx-util
