@@ -7,7 +7,7 @@ TMP_FILE='/tmp/collectd-Telit-LN940-wwan'
 SCRIPT_PATH='/usr/share/collectd/scripts/'
 SCRIPT='collectd_lte_signal.sh'
 
-[ "$(ps | pgrep $SCRIPT)" = "" ] || sh -c "$SCRIPT_PATH$SCRIPT &"
+[ "$(ps | pgrep $SCRIPT)" = "" ] && sh -c "$SCRIPT_PATH$SCRIPT &"
 
 while sleep "$INTERVAL"; do
 #    v=$(echo 'AT^RFSTS?' | socat - /dev/ttyUSB2,crnl 2>/dev/null | \
