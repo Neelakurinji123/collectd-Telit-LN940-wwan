@@ -22,7 +22,7 @@ OpenWrt 21.02.1
 - uwsgi-luci-support
 
 ## Usage
-1. Install OpenWrt packages: `collectd-mod-exec`, `collectd-mod-rrdtool` and `socat`
+1. Install OpenWrt packages: `collectd-mod-exec`, `collectd-mod-rrdtool`, `flock` and `socat`
 2. Create a directory: `/usr/share/collectd/scripts`
 3. Copy `collect.sh` and `collectd_lte_signal.sh` to `/usr/share/collectd/scripts` and run `chmod +x /usr/share/collectd/scripts/*`
 4. Edit `/usr/share/collectd/types.db` and add:
