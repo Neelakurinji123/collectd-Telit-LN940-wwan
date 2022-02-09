@@ -25,5 +25,8 @@ while sleep "$INTERVAL"; do
     else
 	logger -p local0.err -t collectd.exec -s "No response from modem"
     fi
+
+    # If shell script is running duplicated
+
 done
 
