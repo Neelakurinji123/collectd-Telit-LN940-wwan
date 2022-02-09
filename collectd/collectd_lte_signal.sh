@@ -11,17 +11,18 @@ get_info() {
 
 while sleep "$INTERVAL"; do
     get_info
-    echo $v
     n=0
     if ! $(echo $v | grep -q '.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*'); then
         until [ "$n" -ge 4 ] || $(echo $v | grep -q '.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*'); do
             let n++
             get_info
+            echo $v > $TMP_FILE
             sleep 2
         done
+	logger -p local0.err -t collectd.exec -s "No response from modem"
+    elif $(echo $v | grep -q '.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*'); then
         echo $v > $TMP_FILE
     else
-        echo $v > $TMP_FILE
 	logger -p local0.err -t collectd.exec -s "No response from modem"
     fi
 done
