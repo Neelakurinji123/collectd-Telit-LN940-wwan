@@ -22,6 +22,7 @@ while sleep "$INTERVAL"; do
         echo $v > $TMP_FILE
     else
         echo $v > $TMP_FILE
+	logger -p local.err -t collectd.exec -s "No response from modem"
     fi
 done
 
