@@ -10,8 +10,9 @@ get_info() {
 }
 
 while sleep "$INTERVAL"; do
-    get_info
+    v=''
     n=0
+    get_info
     if ! $(echo $v | grep -q '.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*'); then
         until [ "$n" -ge 4 ] || $(echo $v | grep -q '.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*:.*'); do
             let n++
