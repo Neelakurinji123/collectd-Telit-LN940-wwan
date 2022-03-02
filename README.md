@@ -6,7 +6,7 @@ This package collects mobile signal statistics with collectd on OpenWrt v21.02.
 ### Hardware
 - Sony NCP-HG100/Cellular
 ### Firmware
-OpenWrt 21.02.1
+OpenWrt 21.02.2
 - nginx
 - nginx-mod-luci
 - nginx-ssl
