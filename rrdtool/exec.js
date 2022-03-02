@@ -96,7 +96,8 @@ return baseclass.extend({
                                         mobile_signal_sinr: {
                                                 title  : "SINR",
                                                 overlay: false,
-                                                color  : "0000cc"
+                                                color  : "0000cc",
+						noarea: true
                                         }
                                 }
                         }
