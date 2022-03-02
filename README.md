@@ -25,8 +25,8 @@ OpenWrt 21.02.1
 1. Install OpenWrt packages: `collectd-mod-exec`, `collectd-mod-rrdtool`, `flock` and `socat`
 2. Put `collect.sh` and `collectd_lte_signal.sh` in `/usr/libexec/collectd/`
 3. run `chown nobody:nogroup /usr/libexec/collectd/collect*.sh` and`chmod 500 /usr/libexec/collectd/collect*.sh`
-4. Edit `/etc/rc.local`  and add `chmod 666 /dev/ttyUSB2` 
-5. Edit `/usr/share/collectd/types.db` and add:
+4. Edit `/etc/rc.local`: add `chmod 666 /dev/ttyUSB2` 
+5. Edit `/usr/share/collectd/types.db`: add
 ```
 mobile_signal_rsrp	value:GAUGE:U:U
 mobile_signal_rssi	value:GAUGE:U:U
