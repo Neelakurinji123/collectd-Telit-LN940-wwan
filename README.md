@@ -37,3 +37,6 @@ mobile_signal_sinr	value:GAUGE:U:U
    is `network`, and group is `dialout`
 3. Visualise the data. This can be done by installing the `exec.js` script in
     `/www/luci-static/resources/statistics/rrdtool/definitions/exec.js`
+
+### Screenshot
+<img src="screenshot.png" width="600" alt="colloctd exec" />
