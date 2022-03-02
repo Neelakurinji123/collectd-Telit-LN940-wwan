@@ -1,10 +1,13 @@
 #!/bin/sh
 
+#HOSTNAME="${COLLECTD_HOSTNAME:-localhost}"
+#INTERVAL=$(printf %.0f $COLLECTD_INTERVAL)
+
 HOSTNAME="${COLLECTD_HOSTNAME:-localhost}"
-INTERVAL=$(printf %.0f $COLLECTD_INTERVAL)
+INTERVAL="${COLLECTD_INTERVAL:-60}"
 TTY='/dev/ttyUSB2'
 TMP_FILE='/tmp/collectd-Telit-LN940-wwan'
-SCRIPT_PATH='/usr/share/collectd/scripts/'
+SCRIPT_PATH='/usr/libexec/collectd/'
 SCRIPT='collectd_lte_signal.sh'
 
 #[ -z "$(ps | grep -v grep | grep $SCRIPT)" ] && sh -c "$SCRIPT_PATH$SCRIPT &"
